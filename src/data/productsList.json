@@ -1,0 +1,81 @@
+{
+    "products":[
+        {
+            "name":"Complan",
+            "productCode":"Complan_001_123",
+            "displayName": "Complan",
+            "imageLogo":"complan",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            }
+        },
+        {
+            "name":"Complan",
+            "productCode":"Complan_001_123",
+            "displayName": "Complan",
+            "imageLogo":"bournvita",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            }
+        },
+        {
+            "name":"Bournvita",
+            "productCode":"Bournvita_001_123",
+            "displayName": "Bournvita",
+            "imageLogo":"bournvita",
+            "cost":{
+                "price": "300.00",
+                "currency": "USD",
+                "code":"$"
+            }
+        },
+        {
+            "name":"Maaza",
+            "productCode":"Maaza_001_123",
+            "displayName": "Maaza",
+            "imageLogo":"Mazza",
+            "cost":{
+                "price": "100.00",
+                "currency": "INR",
+                "code":"INR"
+            }
+        },
+        {
+            "name":"Ensure",
+            "productCode":"Ensure_001_123",
+            "displayName": "Ensure",
+            "imageLogo":"ensure",
+            "cost":{
+                "price": "500.00",
+                "currency": "INR",
+                "code":"INR"
+            }
+        },
+        {
+            "name":"Complan",
+            "productCode":"Complan_001_123",
+            "displayName": "Complan",
+            "imageLogo":"complan",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            }
+        },
+        {
+            "name":"Complan",
+            "productCode":"Complan_001_123",
+            "displayName": "Complan",
+            "imageLogo":"complan",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            }
+        }
+    ]
+}
