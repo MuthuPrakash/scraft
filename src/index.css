@@ -1,21 +1,21 @@
 body {
-  background-color: #FFCC00;
-  padding: 20px;
+  /* background-color: #FFCC00;
+  padding: 20px; */
   margin: 0;
 }
-h1, h2, p, ul, li {
+/* h1, h2, p, ul, li {
   font-family: sans-serif;
 }
-ul.header li {
+ul.navHeader li {
   display: inline;
   list-style-type: none;
   margin: 0;
 }
-ul.header {
+ul.navHeader {
   background-color: #111;
   padding: 0;
 }
-ul.header li a {
+ul.navHeader li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
@@ -32,8 +32,66 @@ ul.header li a {
 }
 .content li {
   margin-bottom: 10px;
-}
+} */
 
 .productItem:hover{
   background-color:#ffffff;
-} 
+}
+
+div.siteLogo {
+  width: 33%;
+}
+
+.container {
+  font-family: questrial, sans-serif;
+}
+
+.header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.mr-auto {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 15px;
+  line-height: 1.4em;
+  font-family: questrial, sans-serif;
+}
+
+.nav-link {
+  padding: 10px 30px !important;
+}
+
+div.homeBanner{
+  position: absolute;
+}
+
+div.bannerHover{
+  position: relative;
+  top: 200px;
+  left: 420px;
+  width: 690px;
+}
+
+div.bannerHoverTitle{
+  font-size: 69px;
+  font-family: lulo-clean-w01-one-bold;
+  font-weight: bolder;
+}
+
+div.bannerHoverSubtitle{
+  font-size: 30px;
+  margin: 20px 0px;
+}
+
+.bannerHoverButton{
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+}
