@@ -46,6 +46,10 @@ div.siteLogo {
   font-family: questrial, sans-serif;
 }
 
+.row{
+  display: flow-root !important;
+}
+
 .header {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -69,11 +73,11 @@ div.siteLogo {
 }
 
 div.homeBanner{
-  position: absolute;
+  position: relative;
 }
 
 div.bannerHover{
-  position: relative;
+  position: absolute;
   top: 200px;
   left: 420px;
   width: 690px;
@@ -94,4 +98,136 @@ div.bannerHoverSubtitle{
   width: 150px;
   height: 50px;
   font-size: 20px;
+}
+
+.ourFavoritesHeader{
+  padding: 40px 0px;
+    text-align: center;
+    min-height: 66px;
+    pointer-events: none;
+    color: #576855;
+    font: normal normal normal 48px/1.4em lulo-clean-w01-one-bold,questrial,sans-serif;
+    font-weight: bolder;
+}
+
+.weddingInvRow{
+  display: flex !important;
+}
+
+.weddingInvColl{
+  padding-top: 6%;
+}
+
+.weddingInvCollTitle{
+  font: normal normal normal 22px/1.4em lulo-clean-w01-one-bold,sans-serif;
+  color: #424242;
+  letter-spacing: 0em;
+  min-height: 50px;
+  pointer-events: none;
+  text-align: right;
+}
+
+.weddingInvCollSubTitle{
+  letter-spacing: 0.05em;
+  line-height: 1.8em;
+  text-align: right;
+  min-height: 50px;
+  pointer-events: none;
+  font: normal normal normal 15px/1.4em questrial,sans-serif;
+  color: #424242;
+}
+
+.weddingInvCollButtonDiv{
+  text-align: right;
+}
+
+.weddingInvCollButton{
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.weddingInvCollBannerImage{
+  width: 85%;
+  max-height: 420px;
+}
+
+
+.giftPaintingsRow{
+  display: flex !important;
+}
+
+.giftPaintingsColl{
+  padding-top: 6%;
+}
+
+.giftPaintingsCollTitle{
+  font: normal normal normal 22px/1.4em lulo-clean-w01-one-bold,sans-serif;
+  color: #424242;
+  letter-spacing: 0em;
+  min-height: 50px;
+  pointer-events: none;
+  text-align: left;
+}
+
+.giftPaintingsCollSubTitle{
+  letter-spacing: 0.05em;
+  line-height: 1.8em;
+  text-align: left;
+  min-height: 50px;
+  pointer-events: none;
+  font: normal normal normal 15px/1.4em questrial,sans-serif;
+  color: #424242;
+}
+
+.giftPaintingsCollButtonDiv{
+  text-align: left;
+}
+
+.giftPaintingsCollButton{
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.giftPaintingsCollBanner{
+  text-align: right;
+}
+
+.giftPaintingsCollBannerImage{
+  width: 85%;
+  max-height: 420px;
+}
+
+.footerRow{
+  display: flex !important;
+}
+
+.footerSeparator{
+  border-top: 2px solid rgba(66, 66, 66, 1);
+  margin: 20px 0px 50px 0px;
+}
+
+.webInfoTitle, .helpInfoTitle, .contactInfoTitle, .newsLetterInfoTitle{
+  font: normal normal normal 18px lulo-clean-w01-one-bold,questrial,sans-serif;
+  color: #424242;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 10px 5px !important;
+}
+
+div.webInfo a.nav-link, .helpInfo a.nav-link, .contactInfo a.nav-link, .newsLetterInfo a.nav-link, .newsLetterComponents div{
+  padding: 10px 5px !important;
+  font: normal normal normal 13px/1.4em avenir-lt-w01_35-light1475496,questrial,sans-serif;
+  color: #424242;
+
+}
+
+div.webInfo div.nav, .helpInfo div.nav, .contactInfo div.nav, .newsLetterInfo div.nav{
+  display: block !important;
+}
+
+div.contactInfo img{
+  width: 15px;
+  height: 15px;
 }
