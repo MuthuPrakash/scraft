@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
 import Products from './pages/Products';
+import About from './pages/About';
 import { Route, HashRouter } from 'react-router-dom';
 import { Container, Row, Col, Navbar, Nav, FormControl, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -22,11 +23,11 @@ export default class Main extends Component {
         return (
             <HashRouter>
                 <Container className="componentBody">
-                    <Row className="header">
-                        {/* <Col lg={4} className="siteLogo">Scraft</Col> */}
+                    <Row className="header rowFlex">
                         <Col>
                             <Navbar expand="lg">
-                                <Navbar.Brand href="#/"><img src={logo} alt='SCraft' /></Navbar.Brand>
+                                    <Navbar.Brand href="#/"><img src={logo} alt='SCraft' className='full-width' /></Navbar.Brand>
+
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
@@ -48,11 +49,12 @@ export default class Main extends Component {
                     <Row className="content">
                         <Route exact path="/" component={Home} />
                         <Route path="/products" component={Products} />
+                        <Route path="/about" component={About} />
                         <Route path="/contact" component={ContactUs} />
                     </Row>
 
                     {/* Footer Information */}
-                    <Row>
+                    <Row className='footerWrapper'>
                         <Row>
                             <Col lg={12} xl={12}>
                                 <div className='footerSeparator'></div>
@@ -106,7 +108,7 @@ export default class Main extends Component {
                                     </span>
                                     </div>
                                     <div>
-                                        <FormControl aria-describedby="basic-addon1" placeholder="Email Address"/>
+                                        <FormControl aria-describedby="basic-addon1" placeholder="Email Address" />
                                     </div>
                                     <div className='newsLetterButtonDiv'>
                                         <Button className='newsLetterButton' variant="dark">SUBSCRIBE</Button>{' '}

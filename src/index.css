@@ -3,36 +3,14 @@ body {
   padding: 20px; */
   margin: 0;
 }
-/* h1, h2, p, ul, li {
-  font-family: sans-serif;
+
+.rowFlex{
+  display: flex !important;
 }
-ul.navHeader li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
+
+.full-width{
+  width: 100%;
 }
-ul.navHeader {
-  background-color: #111;
-  padding: 0;
-}
-ul.navHeader li a {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
-}
-.content {
-  background-color: #FFF;
-  padding: 20px;
-}
-.content h2 {
-  padding: 0;
-  margin: 0;
-}
-.content li {
-  margin-bottom: 10px;
-} */
 
 .productItem:hover{
   background-color:#ffffff;
@@ -162,7 +140,7 @@ div.bannerHoverSubtitle{
 }
 
 .giftPaintingsCollTitle{
-  font: normal normal normal 22px/1.4em lulo-clean-w01-one-bold,sans-serif;
+  font: normal normal normal 22px/1.4em lulo-clean-w01-one-bold,questrial,sans-serif;
   color: #424242;
   letter-spacing: 0em;
   min-height: 50px;
@@ -205,7 +183,7 @@ div.bannerHoverSubtitle{
 
 .footerSeparator{
   border-top: 2px solid rgba(66, 66, 66, 1);
-  margin: 20px 0px 50px 0px;
+  margin: 10px 0px 50px 0px;
 }
 
 .webInfoTitle, .helpInfoTitle, .contactInfoTitle, .newsLetterInfoTitle{
@@ -213,7 +191,7 @@ div.bannerHoverSubtitle{
   color: #424242;
   font-weight: bolder;
   text-transform: uppercase;
-  padding: 10px 5px !important;
+  padding: 30px 5px 10px 5px !important;
 }
 
 div.webInfo a.nav-link, .helpInfo a.nav-link, .contactInfo a.nav-link, .newsLetterInfo a.nav-link, .newsLetterComponents div{
@@ -230,4 +208,29 @@ div.webInfo div.nav, .helpInfo div.nav, .contactInfo div.nav, .newsLetterInfo di
 div.contactInfo img{
   width: 15px;
   height: 15px;
+}
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (max-device-width: 812px) { 
+    .footerWrapper{
+      text-align: center;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+
 }
