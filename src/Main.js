@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
 import Shipping from './pages/ShippingReturns';
+import StorePolicy from './pages/StorePolicy';
 import Products from './pages/Products';
 import About from './pages/About';
 import { Route, HashRouter } from 'react-router-dom';
@@ -53,6 +54,7 @@ export default class Main extends Component {
                         <Route path="/about" component={About} />
                         <Route path="/contact" component={ContactUs} />
                         <Route path="/shipping" component={Shipping} />
+                        <Route path="/storePolicy" component={StorePolicy} />
                     </Row>
 
                     {/* Footer Information */}
@@ -82,7 +84,7 @@ export default class Main extends Component {
                                 </div>
                                 <Nav>
                                     <Nav.Link href="#/shipping">SHIPPING AND RETURNS</Nav.Link>
-                                    <Nav.Link href="#/products">STORE POLICY</Nav.Link>
+                                    <Nav.Link href="#/storePolicy">STORE POLICY</Nav.Link>
                                     <Nav.Link href="#/products">PAYMENT METHODS</Nav.Link>
                                     <Nav.Link href="#/products">FAQ</Nav.Link>
                                 </Nav>
