@@ -1,0 +1,90 @@
+.rowFlex{
+    display: flex !important;
+}
+
+.faqInfoSection{
+    padding: 2% 15%;
+}
+
+.faqHeader{
+    color: #576855;
+    letter-spacing: 0.07em;
+    line-height: 1.3em;
+    text-align: center;
+    font: normal normal normal 48px/1.4em lulo-clean-w01-one-bold,questrial,sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.faqSubHeader{
+    color: #576855;
+    letter-spacing: 0.07em;
+    line-height: 1.3em;
+    text-align: center;
+    font: normal normal normal 19px/1.4em lulo-clean-w01-one-bold,questrial,sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+.faqTitle{
+    letter-spacing: 0.2em;
+    color: #424242;
+    line-height: 1.8em;
+    font: normal normal normal 15px/1.4em questrial,sans-serif;
+    text-transform: uppercase;
+    padding: 50px 0px 30px 0px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.faqInformation{
+    letter-spacing: 0.05em;
+    line-height: 1.8em;
+    font: normal normal normal 15px/1.4em questrial,sans-serif;
+    color: #424242;
+
+}
+
+.faqWrapper{
+    padding-bottom: 75px;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (max-device-width: 812px) { 
+    .row{
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .faqHeader{
+        font-size: 25px;
+        padding-bottom: 30px;
+    }
+
+    .align-center-mobile{
+        text-align: center;
+    }
+
+    .faqInfoSection{
+        padding: 10px;
+    }
+}
+
+/* Portrait */
+@media only screen  
+  and (max-device-width: 812px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+
+}
