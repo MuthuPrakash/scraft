@@ -15,6 +15,18 @@ import facebook_icon_footer from './assets/banner/facebook_icon_footer.jpg';
 import email_subscribe_icon_footer from './assets/banner/email_subscribe_icon_footer.png';
 import phone_icon_footer from './assets/banner/phone_icon_footer.png';
 import whatsapp_icon_footer from './assets/banner/whatsapp_icon_footer.png';
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+export function ScrollToTop() {
+    const { pathname } = useLocation();
+  
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+  
+    return null;
+  }
 
 export default class Main extends Component {
     constructor(props) {
@@ -50,6 +62,7 @@ export default class Main extends Component {
                         </Col>
                     </Row>
                     <Row className="content">
+                    <ScrollToTop />
                         <Route exact path="/" component={Home} />
                         <Route path="/products" component={Products} />
                         <Route path="/about" component={About} />
@@ -87,7 +100,7 @@ export default class Main extends Component {
                                 <Nav>
                                     <Nav.Link href="#/shipping">SHIPPING AND RETURNS</Nav.Link>
                                     <Nav.Link href="#/storePolicy">STORE POLICY</Nav.Link>
-                                    <Nav.Link href="#/products">PAYMENT METHODS</Nav.Link>
+                                    <Nav.Link href="#/storePolicy">PAYMENT METHODS</Nav.Link>
                                     <Nav.Link href="#/faq">FAQ</Nav.Link>
                                 </Nav>
                             </Col>
