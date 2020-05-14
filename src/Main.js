@@ -6,7 +6,7 @@ import StorePolicy from './pages/StorePolicy';
 import FAQ from './pages/FAQ';
 import Products from './pages/Products';
 import About from './pages/About';
-import { Route, HashRouter } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import { Container, Row, Col, Navbar, Nav, FormControl, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/logo/scraft_freesketch_200x50.png'; // with import
@@ -36,22 +36,22 @@ export default class Main extends Component {
 
     render() {
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <Container className="componentBody">
                     <Row className="header rowFlex">
                         <Col>
                             <Navbar expand="lg">
-                                    <Navbar.Brand href="#/"><img src={logo} alt='SCraft' className='full-width' /></Navbar.Brand>
+                                    <Navbar.Brand href="/"><img src={logo} alt='SCraft' className='full-width' /></Navbar.Brand>
 
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
-                                        <Nav.Link href="#/">HOME</Nav.Link>
-                                        <Nav.Link href="#/products">INVITATION</Nav.Link>
-                                        <Nav.Link href="#/products">GIFTS</Nav.Link>
-                                        <Nav.Link href="#/products">BACKDROPS</Nav.Link>
-                                        <Nav.Link href="#/about">ABOUT</Nav.Link>
-                                        <Nav.Link href="#/contact">CONTACT</Nav.Link>
+                                        <Nav.Link href="/">HOME</Nav.Link>
+                                        <Nav.Link href="/products">INVITATION</Nav.Link>
+                                        <Nav.Link href="/products">GIFTS</Nav.Link>
+                                        <Nav.Link href="/products">BACKDROPS</Nav.Link>
+                                        <Nav.Link href="/about">ABOUT</Nav.Link>
+                                        <Nav.Link href="/contact">CONTACT</Nav.Link>
                                         {/* <NavDropdown title="more" id="basic-nav-dropdown">
                                             <NavDropdown.Item href="#about">About</NavDropdown.Item>
                                             <NavDropdown.Item href="#contact">Contact</NavDropdown.Item>
@@ -85,12 +85,12 @@ export default class Main extends Component {
                                     <span>SCraft</span>
                                 </div>
                                 <Nav>
-                                    <Nav.Link href="#/">HOME</Nav.Link>
-                                    <Nav.Link href="#/products">INVITATION</Nav.Link>
-                                    <Nav.Link href="#/products">GIFTS</Nav.Link>
-                                    <Nav.Link href="#/products">BACKDROPS</Nav.Link>
-                                    <Nav.Link href="#/about">ABOUT</Nav.Link>
-                                    <Nav.Link href="#/contact">CONTACT</Nav.Link>
+                                    <Nav.Link href="/">HOME</Nav.Link>
+                                    <Nav.Link href="/products">INVITATION</Nav.Link>
+                                    <Nav.Link href="/products">GIFTS</Nav.Link>
+                                    <Nav.Link href="/products">BACKDROPS</Nav.Link>
+                                    <Nav.Link href="/about">ABOUT</Nav.Link>
+                                    <Nav.Link href="/contact">CONTACT</Nav.Link>
                                 </Nav>
                             </Col>
                             <Col lg={3} className='helpInfo'>
@@ -98,10 +98,10 @@ export default class Main extends Component {
                                     <span>Help</span>
                                 </div>
                                 <Nav>
-                                    <Nav.Link href="#/shipping">SHIPPING AND RETURNS</Nav.Link>
-                                    <Nav.Link href="#/storePolicy">STORE POLICY</Nav.Link>
-                                    <Nav.Link href="#/storePolicy">PAYMENT METHODS</Nav.Link>
-                                    <Nav.Link href="#/faq">FAQ</Nav.Link>
+                                    <Nav.Link href="/shipping">SHIPPING AND RETURNS</Nav.Link>
+                                    <Nav.Link href="/storePolicy">STORE POLICY</Nav.Link>
+                                    <Nav.Link href="/storePolicy">PAYMENT METHODS</Nav.Link>
+                                    <Nav.Link href="/faq">FAQ</Nav.Link>
                                 </Nav>
                             </Col>
                             <Col lg={3} className='contactInfo'>
@@ -137,7 +137,7 @@ export default class Main extends Component {
                         </Row>
                     </Row>
                 </Container>
-            </HashRouter>
+            </BrowserRouter>
         );
     }
 }

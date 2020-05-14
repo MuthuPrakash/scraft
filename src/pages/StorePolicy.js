@@ -55,7 +55,7 @@ Your user’s privacy is of the highest importance to your business, so take the
 I'm the second paragraph in your wholesale inquiries section. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add details about your policy and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</span>
                             </div>
 
-                            <div className='storePolicyTitle align-center-mobile'>
+                            <div className='storePolicyTitle align-center-mobile' id='paymentMethods'>
                                 <span>Payment Methods</span>
                             </div>
                             <div className='storePolicyInformation align-center-mobile'>
