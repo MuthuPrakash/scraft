@@ -66,6 +66,10 @@
         padding-bottom: 30px;
     }
 
+    .faqSubHeader{
+        font-size: 14px;
+    }
+
     .align-center-mobile{
         text-align: center;
     }
