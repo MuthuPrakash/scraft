@@ -20,18 +20,18 @@ import { useLocation } from "react-router-dom";
 
 export function ScrollToTop() {
     const { pathname } = useLocation();
-  
+
     useEffect(() => {
-      window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
     }, [pathname]);
-  
+
     return null;
-  }
+}
 
 export default class Main extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
 
     render() {
@@ -41,15 +41,15 @@ export default class Main extends Component {
                     <Row className="header rowFlex">
                         <Col>
                             <Navbar expand="lg">
-                                    <Navbar.Brand href="/"><img src={logo} alt='SCraft' className='full-width' /></Navbar.Brand>
+                                <Navbar.Brand href="/"><img src={logo} alt='SCraft' className='full-width' /></Navbar.Brand>
 
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav">
                                     <Nav className="mr-auto">
                                         <Nav.Link href="/">HOME</Nav.Link>
-                                        <Nav.Link href="/products">INVITATION</Nav.Link>
-                                        <Nav.Link href="/products">GIFTS</Nav.Link>
-                                        <Nav.Link href="/products">BACKDROPS</Nav.Link>
+                                        <Nav.Link href="/products?cat=wi">INVITATION</Nav.Link>
+                                        <Nav.Link href="/products?cat=gifts">GIFTS</Nav.Link>
+                                        <Nav.Link href="/products?cat=backdrops">BACKDROPS</Nav.Link>
                                         <Nav.Link href="/about">ABOUT</Nav.Link>
                                         <Nav.Link href="/contact">CONTACT</Nav.Link>
                                         {/* <NavDropdown title="more" id="basic-nav-dropdown">
@@ -62,7 +62,7 @@ export default class Main extends Component {
                         </Col>
                     </Row>
                     <Row className="content">
-                    <ScrollToTop />
+                        <ScrollToTop />
                         <Route exact path="/" component={Home} />
                         <Route path="/products" component={Products} />
                         <Route path="/about" component={About} />
@@ -86,9 +86,9 @@ export default class Main extends Component {
                                 </div>
                                 <Nav>
                                     <Nav.Link href="/">HOME</Nav.Link>
-                                    <Nav.Link href="/products">INVITATION</Nav.Link>
-                                    <Nav.Link href="/products">GIFTS</Nav.Link>
-                                    <Nav.Link href="/products">BACKDROPS</Nav.Link>
+                                    <Nav.Link href="/products?cat=wi">INVITATION</Nav.Link>
+                                    <Nav.Link href="/products?cat=gifts">GIFTS</Nav.Link>
+                                    <Nav.Link href="/products?cat=backdrops">BACKDROPS</Nav.Link>
                                     <Nav.Link href="/about">ABOUT</Nav.Link>
                                     <Nav.Link href="/contact">CONTACT</Nav.Link>
                                 </Nav>

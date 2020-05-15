@@ -3,9 +3,9 @@ import { Row, Col, Form, Button } from 'react-bootstrap';
 import '../assets/stylesheets/contact.css'
 
 export default class ContactUs extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (
@@ -52,7 +52,7 @@ export default class ContactUs extends Component {
                                     <Form.Label>Enter Your Phone</Form.Label>
                                     <Form.Control type="text" placeholder="Phone Number" />
                                 </Form.Group>
-                                <Form.Group controlId="formGroupEmail">
+                                <Form.Group controlId="formGroupMessage">
                                     <Form.Label>Enter Your Message*</Form.Label>
                                     <Form.Control required as="textarea" rows="3" placeholder="Write your request" />
                                 </Form.Group>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import home_banner from './../assets/banner/home_banner.jpg'; // with import
 import ourFavorites_banner from './../assets/banner/ourFavorites_banner.jpg'; // with import
 import paintings_banner from './../assets/banner/paintings_banner.jpg';
@@ -8,9 +8,9 @@ import { Button } from 'react-bootstrap'
 import '../assets/stylesheets/home.css'
 
 export default class Home extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
 
     render() {

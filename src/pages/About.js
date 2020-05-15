@@ -5,9 +5,9 @@ import '../index.css'
 import about_person_banner from './../assets/banner/about_background_collage_banner.jpg';
 
 export default class About extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (

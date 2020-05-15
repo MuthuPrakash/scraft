@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, Button } from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 import '../assets/stylesheets/shippingReturns.css'
 
 export default class Shipping extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (

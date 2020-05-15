@@ -3,9 +3,9 @@ import { Row, Col, Accordion, Card } from 'react-bootstrap';
 import '../assets/stylesheets/faq.css'
 
 export default class FAQ extends Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     render() {
         return (
