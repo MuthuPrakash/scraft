@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs';
 import Products from './pages/Products';
+import ProductOverview from './pages/ProductOverview';
 import { Route, HashRouter } from 'react-router-dom';
 import { Container, Row, Col, Navbar, Nav, FormControl, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,7 +21,7 @@ export default class Main extends Component {
 
     render() {
         return (
-            <HashRouter>
+            <HashRouter >
                 <Container className="componentBody">
                     <Row className="header">
                         {/* <Col lg={4} className="siteLogo">Scraft</Col> */}
@@ -49,6 +50,7 @@ export default class Main extends Component {
                         <Route exact path="/" component={Home} />
                         <Route path="/products" component={Products} />
                         <Route path="/contact" component={ContactUs} />
+                        <Route exact path="/productoverview/:id" component={ProductOverview} />
                     </Row>
 
                     {/* Footer Information */}
