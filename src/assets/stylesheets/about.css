@@ -1,0 +1,83 @@
+.rowFlex{
+    display: flex !important;
+  }
+  
+.aboutHeader{
+    letter-spacing: 0.07em;
+    color: #576855;
+    font: normal normal normal 48px/1.4em lulo-clean-w01-one-bold,questrial,sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 10px 50px 10px;
+}
+
+.aboutBanner{
+    text-align: right;
+}
+
+.aboutTitle{
+    line-height: 1.7em;
+    font: normal normal normal 22px/1.4em lulo-clean-w01-one-bold,questrial,sans-serif;
+    color: #424242;
+    text-transform: uppercase;
+}
+
+.aboutDescription{
+    letter-spacing: 0.03em;
+    font: normal normal normal 15px/1.4em questrial,sans-serif;
+    color: #424242;
+    line-height: 1.8em;
+    padding-top: 20px;
+    width: 80%;
+}
+
+.aboutWrapper{
+    padding-bottom: 75px;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (max-device-width: 812px) { 
+    .row{
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .aboutHeader{
+        font-size: 25px;
+        padding-bottom: 30px;
+    }
+
+    .align-center-mobile{
+        text-align: center;
+    }
+
+    .aboutDescription{
+        width: 100%;
+    }
+
+    .aboutBanner{
+        padding-bottom: 20px;
+    }
+
+    .aboutBanner img{
+        width: 100%;
+    }
+}
+
+/* Portrait */
+@media only screen  
+  and (max-device-width: 812px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+
+}

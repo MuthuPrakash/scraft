@@ -3,36 +3,14 @@ body {
   padding: 20px; */
   margin: 0;
 }
-/* h1, h2, p, ul, li {
-  font-family: sans-serif;
+
+.rowFlex{
+  display: flex !important;
 }
-ul.navHeader li {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
+
+.full-width{
+  width: 100%;
 }
-ul.navHeader {
-  background-color: #111;
-  padding: 0;
-}
-ul.navHeader li a {
-  color: #FFF;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 20px;
-  display: inline-block;
-}
-.content {
-  background-color: #FFF;
-  padding: 20px;
-}
-.content h2 {
-  padding: 0;
-  margin: 0;
-}
-.content li {
-  margin-bottom: 10px;
-} */
 
 .productItem:hover{
   background-color:#ffffff;
@@ -72,132 +50,6 @@ div.siteLogo {
   padding: 10px 30px !important;
 }
 
-div.homeBanner{
-  position: relative;
-}
-
-div.bannerHover{
-  position: absolute;
-  top: 200px;
-  left: 420px;
-  width: 690px;
-}
-
-div.bannerHoverTitle{
-  font-size: 69px;
-  font-family: lulo-clean-w01-one-bold;
-  font-weight: bolder;
-}
-
-div.bannerHoverSubtitle{
-  font-size: 30px;
-  margin: 20px 0px;
-}
-
-.bannerHoverButton{
-  width: 150px;
-  height: 50px;
-  font-size: 20px;
-}
-
-.ourFavoritesHeader{
-  padding: 40px 0px;
-    text-align: center;
-    min-height: 66px;
-    pointer-events: none;
-    color: #576855;
-    font: normal normal normal 48px/1.4em lulo-clean-w01-one-bold,questrial,sans-serif;
-    font-weight: bolder;
-}
-
-.weddingInvRow{
-  display: flex !important;
-}
-
-.weddingInvColl{
-  padding-top: 6%;
-}
-
-.weddingInvCollTitle{
-  font: normal normal normal 22px/1.4em lulo-clean-w01-one-bold,sans-serif;
-  color: #424242;
-  letter-spacing: 0em;
-  min-height: 50px;
-  pointer-events: none;
-  text-align: right;
-}
-
-.weddingInvCollSubTitle{
-  letter-spacing: 0.05em;
-  line-height: 1.8em;
-  text-align: right;
-  min-height: 50px;
-  pointer-events: none;
-  font: normal normal normal 15px/1.4em questrial,sans-serif;
-  color: #424242;
-}
-
-.weddingInvCollButtonDiv{
-  text-align: right;
-}
-
-.weddingInvCollButton{
-  width: 150px;
-  height: 50px;
-  font-size: 20px;
-}
-
-.weddingInvCollBannerImage{
-  width: 85%;
-  max-height: 420px;
-}
-
-
-.giftPaintingsRow{
-  display: flex !important;
-}
-
-.giftPaintingsColl{
-  padding-top: 6%;
-}
-
-.giftPaintingsCollTitle{
-  font: normal normal normal 22px/1.4em lulo-clean-w01-one-bold,sans-serif;
-  color: #424242;
-  letter-spacing: 0em;
-  min-height: 50px;
-  pointer-events: none;
-  text-align: left;
-}
-
-.giftPaintingsCollSubTitle{
-  letter-spacing: 0.05em;
-  line-height: 1.8em;
-  text-align: left;
-  min-height: 50px;
-  pointer-events: none;
-  font: normal normal normal 15px/1.4em questrial,sans-serif;
-  color: #424242;
-}
-
-.giftPaintingsCollButtonDiv{
-  text-align: left;
-}
-
-.giftPaintingsCollButton{
-  width: 150px;
-  height: 50px;
-  font-size: 20px;
-}
-
-.giftPaintingsCollBanner{
-  text-align: right;
-}
-
-.giftPaintingsCollBannerImage{
-  width: 85%;
-  max-height: 420px;
-}
 
 .footerRow{
   display: flex !important;
@@ -205,7 +57,7 @@ div.bannerHoverSubtitle{
 
 .footerSeparator{
   border-top: 2px solid rgba(66, 66, 66, 1);
-  margin: 20px 0px 50px 0px;
+  margin: 10px 0px 50px 0px;
 }
 
 .webInfoTitle, .helpInfoTitle, .contactInfoTitle, .newsLetterInfoTitle{
@@ -213,7 +65,7 @@ div.bannerHoverSubtitle{
   color: #424242;
   font-weight: bolder;
   text-transform: uppercase;
-  padding: 10px 5px !important;
+  padding: 30px 5px 10px 5px !important;
 }
 
 div.webInfo a.nav-link, .helpInfo a.nav-link, .contactInfo a.nav-link, .newsLetterInfo a.nav-link, .newsLetterComponents div{
@@ -230,4 +82,29 @@ div.webInfo div.nav, .helpInfo div.nav, .contactInfo div.nav, .newsLetterInfo di
 div.contactInfo img{
   width: 15px;
   height: 15px;
+}
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (max-device-width: 812px) { 
+    .footerWrapper{
+      text-align: center;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+
 }
