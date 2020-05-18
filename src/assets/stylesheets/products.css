@@ -1,0 +1,115 @@
+.rowFlex {
+    display: flex !important;
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+
+@media only screen and (max-device-width: 812px) {
+    .row {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+    .faqHeader {
+        font-size: 25px;
+        padding-bottom: 30px;
+    }
+    .productItem{
+        min-height: 400px;
+    }
+    .productImageWrapper{
+        width: 100%;
+        height: 100%;
+    }
+    .productsGrid {
+        width: 100%;
+        height: 100%;
+        padding: 10px 0px;
+        margin: 0px !important;
+    }
+    .productItem {
+        padding: 5px 5px 30px 5px !important;
+
+    }
+}
+
+/* Portrait */
+
+@media only screen and (max-device-width: 812px) and (orientation: portrait) {}
+
+/* Landscape */
+
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {}
+
+/* ----------- Desktop ----------- */
+
+@media only screen and (min-device-width: 813px) {
+    .productImageWrapper {
+        width: 320px;
+        height: 400px;
+    }
+    .productsGrid {
+        width: 100%;
+        height: 100%;
+        padding: 2% 8%;
+        margin: 0px !important;
+    }
+    .productItem {
+        padding: 15px;
+        margin: 5px;
+    }
+}
+
+.productsListCategoryHeader {
+    color: #576855;
+    letter-spacing: 0.07em;
+    line-height: 1.3em;
+    text-align: center;
+    font: normal normal normal 48px/1.4em lulo-clean-w01-one-bold, questrial, sans-serif;
+    font-weight: bolder;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+
+
+.productItem {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: calc(33% - 40px);
+    flex-grow: 0;
+    ;
+    border-width: 5px;
+    
+    border-color: orange;
+    cursor: pointer;
+}
+
+.productImage {
+    width: 100%;
+    height: 100%;
+}
+
+.productInfo {
+    height: 60px;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productInfoName {
+    --gallery_titleFontStyle: normal normal normal 16px/1.4em questrial, sans-serif;
+    --gallery_titleTextColor: #424242;
+    font: normal normal normal 16px/1.4em questrial, sans-serif;
+    color: #424242;
+}
+
+.productInfoCost {
+    --gallery_priceColor: #999997;
+    --gallery_priceFontStyle: normal normal normal 13px/1.4em questrial, sans-serif;
+    color: rgb(87, 104, 85);
+    font: normal normal normal 13px/1.4em questrial, sans-serif;
+}
