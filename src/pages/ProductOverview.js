@@ -8,7 +8,7 @@ export default class ProductOverview extends Component{
         super(props);
         this.productId = this.props.match.params.id;
         this.state={
-            imageUrl: require("../content/images/ProductLogo/complan.jpeg"),
+          
             size: 1,
             quantity: 1,
             product: null,
@@ -37,7 +37,8 @@ export default class ProductOverview extends Component{
                 console.log(product)
                 this.setState({
                     product: product[0],
-                    isValidProduct: true
+                    isValidProduct: true,
+                    imageUrl:require("../content/images/ProductLogo/" + product[0].imageLogo),
                 })
             }
         }        
@@ -65,7 +66,7 @@ export default class ProductOverview extends Component{
         if(!this.state.isValidProduct) return (<Row><Col>No products found</Col></Row>)
         return (
             <Row>
-            <Row className="align-items-center">
+            <Row className="rowFlex align-items-center">
                 <Col>
                     <div style={{height:"400px", backgroundSize: 'contain',backgroundPosition:"left", backgroundRepeat:"no-repeat", marginBottom:'10px', borderWidth:'2px', borderColor:"blue", backgroundImage: `url(${this.state.imageUrl})`}}>
                     </div>

@@ -47,7 +47,7 @@ export default class Products extends Component {
          ///history.push('/contact');
      } 
  
-     prepareProducts = () => {
+     prepareProducts = (categoryCode) => {
 
         console.log('category value from query string : ', categoryCode);
         var productList = this.state.productList.products.filter(function(product){
@@ -55,7 +55,8 @@ export default class Products extends Component {
             return product.categoryCode.toString().toLowerCase() === categoryCode.toString().toLowerCase();
         }).map((item, index) => {
             return <ProductList product={item} key={index} onOverView={this.productOverView} />
-        })
+        });
+        return productList;
     }
     
     render() {
