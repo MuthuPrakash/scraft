@@ -10,11 +10,17 @@ export default class ProductItem extends Component {
             imageUrl: require("../content/images/ProductLogo/" + this.props.product.imageLogo)
         }
     }
+    onOverView = () => {
+        if(this.props.onOverView== null || typeof this.props.onOverView != 'function') return;
+       // console.log("click triggered")
+        this.props.onOverView(this.props.product.productCode);
+    }
+
 
     render() {
         const imageUrl = this.state.imageUrl;
         return (
-            <Col className='productItem'>
+            <Col className='productItem' onClick={this.onOverView}>
                 <div className='productImageWrapper'>
                     <img src={imageUrl} className='productImage' alt='productImage'></img>
                 </div>

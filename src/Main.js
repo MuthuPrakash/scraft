@@ -5,8 +5,9 @@ import Shipping from './pages/ShippingReturns';
 import StorePolicy from './pages/StorePolicy';
 import FAQ from './pages/FAQ';
 import Products from './pages/Products';
-import About from './pages/About';
+import ProductOverview from './pages/ProductOverview';
 import { Route, BrowserRouter } from 'react-router-dom';
+import About from './pages/About';
 import { Container, Row, Col, Navbar, Nav, FormControl, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/logo/scraft_freesketch_200x50.png'; // with import
@@ -67,6 +68,7 @@ export default class Main extends Component {
                         <Route path="/products" component={Products} />
                         <Route path="/about" component={About} />
                         <Route path="/contact" component={ContactUs} />
+                        <Route exact path="/productoverview/:id" component={ProductOverview} />
                         <Route path="/shipping" component={Shipping} />
                         <Route path="/storePolicy" component={StorePolicy} />
                         <Route path="/faq" component={FAQ} />

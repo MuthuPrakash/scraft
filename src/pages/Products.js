@@ -39,6 +39,25 @@ export default class Products extends Component {
         return productList;
     }
 
+
+    productOverView = (productCode) => {
+        // alert("test")
+         //this.props.history.push("/productoverview/id");
+         this.props.history.push(`/productoverview/${productCode}`);
+         ///history.push('/contact');
+     } 
+ 
+     prepareProducts = () => {
+
+        console.log('category value from query string : ', categoryCode);
+        var productList = this.state.productList.products.filter(function(product){
+            console.log(product.categoryCode.toString().toLowerCase());
+            return product.categoryCode.toString().toLowerCase() === categoryCode.toString().toLowerCase();
+        }).map((item, index) => {
+            return <ProductList product={item} key={index} onOverView={this.productOverView} />
+        })
+    }
+    
     render() {
         const category = this.state.category;
         const categoryCode = this.state.categoryCode
