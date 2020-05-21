@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Main from './Main';
 import * as serviceWorker from './serviceWorker';
-require('typeface-questrial')
+import { Provider } from 'react-redux'
+import store from './redux/store'
+
+require('typeface-questrial');
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <Main />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
