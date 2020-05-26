@@ -1,13 +1,110 @@
 body {
+  /* background-color: #FFCC00;
+  padding: 20px; */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.rowFlex{
+  display: flex !important;
+}
+
+.full-width{
+  width: 100%;
+}
+
+.productItem:hover{
+  background-color:#ffffff;
+}
+
+div.siteLogo {
+  width: 33%;
+}
+
+.container {
+  font-family: questrial, sans-serif;
+}
+
+.row{
+  display: flow-root !important;
+}
+
+.header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.mr-auto {
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: 15px;
+  line-height: 1.4em;
+  font-family: questrial, sans-serif;
+}
+
+.nav-link {
+  padding: 10px 30px !important;
+}
+
+
+.footerRow{
+  display: flex !important;
+}
+
+.footerSeparator{
+  border-top: 2px solid rgba(66, 66, 66, 1);
+  margin: 10px 0px 50px 0px;
+}
+
+.webInfoTitle, .helpInfoTitle, .contactInfoTitle, .newsLetterInfoTitle{
+  font: normal normal normal 18px lulo-clean-w01-one-bold,questrial,sans-serif;
+  color: #424242;
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 30px 5px 10px 5px !important;
+}
+
+div.webInfo a.nav-link, .helpInfo a.nav-link, .contactInfo a.nav-link, .newsLetterInfo a.nav-link, .newsLetterComponents div{
+  padding: 10px 5px !important;
+  font: normal normal normal 13px/1.4em avenir-lt-w01_35-light1475496,questrial,sans-serif;
+  color: #424242;
+
+}
+
+div.webInfo div.nav, .helpInfo div.nav, .contactInfo div.nav, .newsLetterInfo div.nav{
+  display: block !important;
+}
+
+div.contactInfo img{
+  width: 15px;
+  height: 15px;
+}
+
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (max-device-width: 812px) { 
+    .footerWrapper{
+      text-align: center;
+    }
+}
+
+/* Portrait */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+
 }

@@ -1,0 +1,148 @@
+{
+    "products":[
+        {
+            "name":"fromHandsToHearts",
+            "productCode":"WI_01",
+            "displayName": "From Hands to Hearts",
+            "imageLogo": "WeddingInvitation_FromHandsToHearts.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"getWellSoon",
+            "productCode":"WI_02",
+            "displayName": "Get Well Soon Card",
+            "imageLogo": "WeddingInvitation_GetWellSoon.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"suitorRelish",
+            "productCode":"WI_03",
+            "displayName": "Suitor Relish",
+            "imageLogo": "WeddingInvitation_SuitorRelish.jpg",
+            "cost":{
+                "price": "300.00",
+                "currency": "USD",
+                "code":"$"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"theCoffeeTale",
+            "productCode":"WI_04",
+            "displayName": "The Coffee Tale",
+            "imageLogo": "WeddingInvitation_TheCoffeeTale.jpg",
+            "cost":{
+                "price": "100.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"thePurpleGrandeur",
+            "productCode":"WI_05",
+            "displayName": "The Purple Grandeur",
+            "imageLogo": "WeddingInvitation_ThePurpleGrandeur.jpg",
+            "cost":{
+                "price": "500.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"wildLove",
+            "productCode":"WI_06",
+            "displayName": "Wild Love",
+            "imageLogo": "WeddingInvitation_WildLove.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"woodenCoaster",
+            "productCode":"WI_07",
+            "displayName": "Wooden Coaster",
+            "imageLogo": "WeddingInvitation_WoodenCoaster.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"youMeAndCoffee",
+            "productCode":"WI_08",
+            "displayName": "You Me and Coffee",
+            "imageLogo": "WeddingInvitation_YouMeAndCoffee.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "WI"
+        },
+        {
+            "name":"elephant",
+            "productCode":"G_01",
+            "displayName": "Elephant with baby",
+            "imageLogo": "Gifts_Elephant.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "Gifts"
+        },
+        {
+            "name":"slowAndSteady",
+            "productCode":"G_02",
+            "displayName": "Slow and Steady",
+            "imageLogo": "Gifts_SlowAndSteady.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "Gifts"
+        },
+        {
+            "name":"theWoman",
+            "productCode":"G_03",
+            "displayName": "The Woman",
+            "imageLogo": "Gifts_TheWoman.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "Gifts"
+        },
+        {
+            "name":"swan",
+            "productCode":"B_01",
+            "displayName": "Swan",
+            "imageLogo": "Backdrops_Swan.jpg",
+            "cost":{
+                "price": "200.00",
+                "currency": "INR",
+                "code":"INR"
+            },
+            "categoryCode": "Backdrops"
+        }
+    ]
+}
