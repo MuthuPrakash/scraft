@@ -1,0 +1,51 @@
+.rowFlex{
+    display: flex !important;
+}
+
+.breadcrumb{
+    color: #424242 !important;
+    text-decoration: none !important;
+    font: normal normal normal 15px/1.4em questrial,sans-serif;
+    background-color: #ffffff !important;
+}
+
+.breadcrumb a, .breadcrumb .nav-link, .breadcrumb .nav {
+    padding: 5px 5px !important;
+}
+
+
+/* ----------- Desktop ----------- */
+
+@media only screen and (min-device-width: 813px) {
+    
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (max-device-width: 812px) { 
+    .row{
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .align-center-mobile{
+        text-align: center;
+    }
+
+}
+
+/* Portrait */
+@media only screen  
+  and (max-device-width: 812px) 
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (max-device-width: 812px) 
+  and (orientation: landscape) { 
+
+}
