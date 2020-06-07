@@ -10,6 +10,7 @@
 .contactFeedbackSection{
     padding-right: 30%;
     padding-left: 10%;
+    display: none;
 }
 .contactHeader{
     color: #576855;
@@ -52,6 +53,44 @@
     font-size: 20px;
 }
 
+/* ----------- Desktop ----------- */
+
+@media only screen and (min-device-width: 813px) {
+    div.homeBanner {
+        position: relative;
+    }
+    div.bannerHover {
+        position: absolute;
+        top: 200px;
+        left: 420px;
+        width: 690px;
+    }
+    div.bannerHoverTitle {
+        font-size: 69px;
+    }
+    div.bannerHoverSubtitle {
+        font-size: 30px;
+    }
+    .bannerHoverButton {
+        width: 150px;
+        height: 50px;
+        font-size: 20px;
+    }
+    .ourFavoritesHeader {
+        font-size: 48px;
+    }
+    .weddingInvColl {
+        text-align: right;
+    }
+    .weddingInvCollBannerImage, .giftPaintingsCollBannerImage {
+        width: 85%;
+    }
+    .mapsEmbedIframe{
+        width: 80%;
+        height: 350px;
+    }
+}
+
 /* ----------- iPhone X ----------- */
 
 /* Portrait and Landscape */
@@ -77,6 +116,11 @@
 
     .contactInfoSection, .contactFeedbackSection{
         padding: 10px;
+    }
+
+    .mapsEmbedIframe{
+        width: 100%;
+        height: 350px;
     }
 }
 
