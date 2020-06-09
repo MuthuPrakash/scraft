@@ -84,6 +84,16 @@ div.contactInfo img{
   height: 15px;
 }
 
+ul.productOverImages {
+  list-style-type: none;
+  padding: 4px;
+ }
+
+ ul.productOverImages li.selected{
+  border-color: 'red';
+  border-width: 5px;
+ }
+
 
 /* ----------- iPhone X ----------- */
 

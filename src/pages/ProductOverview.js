@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { Row, Col, Button, Nav } from 'react-bootstrap';
 import Form from 'react-bootstrap/Form'
 import '../assets/stylesheets/productOverview.css'
+import ProductSegmentedList from '../components/ProductSegmentedList';
+import { connect } from 'react-redux';
+import {selectProductItem} from '../redux/actions/productOverViewActions';
 
-export default class ProductOverview extends Component {
+class ProductOverview extends Component {
     constructor(props) {
         super(props);
         this.productId = this.props.match.params.id;
@@ -12,13 +15,16 @@ export default class ProductOverview extends Component {
             size: 1,
             quantity: 1,
             product: null,
-            isValidProduct: false
+           // isValidProduct: false
         }
         console.log("constructor")
         console.log("productCode : " + this.productId);
     }
-
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps.product)
+   }
     componentWillMount() {
+        console.log(this.props.product)
         var productList = require('../data/productsList.json');
         console.log("reached mount ")
         console.log(this.props.match.params.id)
@@ -36,8 +42,9 @@ export default class ProductOverview extends Component {
                 console.log(product)
                 this.setState({
                     product: product[0],
-                    isValidProduct: true,
+                    //isValidProduct: true,
                     imageUrl: require("../content/images/ProductLogo/" + product[0].imageLogo),
+                    parentForm:  "/products?cat="+product[0].categoryCode.toString().toLowerCase(),
                     productCategory: product[0].categoryCode.toString().toLowerCase() === 'wi'
                         ? 'Wedding Invitaion'
                         : product[0].categoryCode.toString().toLowerCase() === 'gifts'
@@ -46,10 +53,14 @@ export default class ProductOverview extends Component {
                                 ? 'Backdrops'
                                 : 'Scraft Products'
                 })
+
+                this.props.selectProductItem(product[0])
+            
+               
             }
         }
     }
-
+   
     onQuantityChange = (event) => {
         this.setState({
             quantity: event.target.value
@@ -68,26 +79,50 @@ export default class ProductOverview extends Component {
         alert("quantity: " + this.state.quantity)
     }
 
+    prepareImageList = () => {
+        if(this.props.product.selectedItem.hasOwnProperty("overViewImages") &&  this.props.product.selectedItem.overViewImages.length > 0)
+        {
+         var imageList =  this.props.product.selectedItem.overViewImages.map((item) => {
+             console.log(item)
+                return <ProductSegmentedList imageUrl={item}/>
+            });
+            return imageList;  
+        }
+        else{
+            return <ProductSegmentedList imageUrl={this.state.product.imageLogo}/>
+        }
+    }
+
     render() {
-        if (!this.state.isValidProduct) return (<Row><Col>No products found</Col></Row>)
+        if (this.props.product.selectedItem == null) return (<Row><Col>No products found</Col></Row>)
         return (
             <Row>
                 <Row>
                     <Nav className='breadcrumb'>
                         <Nav.Link href="/">HOME / </Nav.Link>
-                        <Nav.Link href="/products?cat=wi">{this.state.productCategory} / </Nav.Link>
-                        <Nav >{this.state.product.displayName}</Nav>
+                        <Nav.Link href={this.state.parentForm}>{this.state.productCategory} / </Nav.Link>
+                        <Nav >{this.props.product.selectedItem.displayName}</Nav>
                     </Nav>
                 </Row>
                 <Row className="rowFlex align-items-center">
-                    <Col>
-                        <div style={{ height: "400px", backgroundSize: 'contain', backgroundPosition: "left", backgroundRepeat: "no-repeat", marginBottom: '10px', borderWidth: '2px', borderColor: "blue", backgroundImage: `url(${this.state.imageUrl})` }}>
+                    <Col style={{display:'flex', flexDirection:'row'}}>
+                    <Col style={{flex:2, float:'left'}}>
+                        <ul class="productOverImages">
+                        {
+                            this.prepareImageList()
+                        }
+                        </ul>
+                    </Col>
+                    <Col style={{flex:10, float:'left'}}>
+                        <div style={{ height: "400px", backgroundSize: 'contain', backgroundPosition: "left", backgroundRepeat: "no-repeat", marginBottom: '10px', borderWidth: '2px', borderColor: "blue", backgroundImage: `url(${this.props.product.currImage})` }}>
                         </div>
+                        </Col>
+                       
                     </Col>
                     <Col>
                         <div style={{ borderColor: "red", borderWidth: "2px" }}>
-                            <div><h1>{this.state.product.displayName}</h1></div>
-                            <div><span>{this.state.product.cost.price}</span></div>
+                            <div><h1>{this.props.product.selectedItem.displayName}</h1></div>
+                            <div><span>{this.props.product.selectedItem.cost.price}</span></div>
                             <div>
                                 <Form.Group>
                                     <Form.Label>Size</Form.Label>
@@ -132,3 +167,9 @@ export default class ProductOverview extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => ({
+    product: state.currentProduct
+})
+
+export default connect(mapStateToProps, {selectProductItem})(ProductOverview);
