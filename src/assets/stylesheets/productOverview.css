@@ -13,6 +13,26 @@
     padding: 5px 5px !important;
 }
 
+.productImagesColl{
+  display: flex;
+  flex-direction: row;
+}
+
+.productIconColl{
+  flex: 2;
+  float: left;
+}
+
+.productImageWrapper{
+  flex: 10;
+  float: left;
+}
+
+.productImage{
+  /* style={{ height: "400px", backgroundSize: 'contain', backgroundPosition: "left", backgroundRepeat: "no-repeat", marginBottom: '10px', borderWidth: '2px', borderColor: "blue", backgroundImage: `url(${this.props.product.currImage})` }} */
+  height: 400px;
+  
+}
 
 /* ----------- Desktop ----------- */
 

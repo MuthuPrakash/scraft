@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form'
 import '../assets/stylesheets/productOverview.css'
 import ProductSegmentedList from '../components/ProductSegmentedList';
 import { connect } from 'react-redux';
-import {selectProductItem} from '../redux/actions/productOverViewActions';
+import { selectProductItem } from '../redux/actions/productOverViewActions';
 
 class ProductOverview extends Component {
     constructor(props) {
@@ -15,14 +15,14 @@ class ProductOverview extends Component {
             size: 1,
             quantity: 1,
             product: null,
-           // isValidProduct: false
+            // isValidProduct: false
         }
         console.log("constructor")
         console.log("productCode : " + this.productId);
     }
     componentWillReceiveProps(nextProps) {
         console.log(nextProps.product)
-   }
+    }
     componentWillMount() {
         console.log(this.props.product)
         var productList = require('../data/productsList.json');
@@ -44,7 +44,7 @@ class ProductOverview extends Component {
                     product: product[0],
                     //isValidProduct: true,
                     imageUrl: require("../content/images/ProductLogo/" + product[0].imageLogo),
-                    parentForm:  "/products?cat="+product[0].categoryCode.toString().toLowerCase(),
+                    parentForm: "/products?cat=" + product[0].categoryCode.toString().toLowerCase(),
                     productCategory: product[0].categoryCode.toString().toLowerCase() === 'wi'
                         ? 'Wedding Invitaion'
                         : product[0].categoryCode.toString().toLowerCase() === 'gifts'
@@ -55,12 +55,12 @@ class ProductOverview extends Component {
                 })
 
                 this.props.selectProductItem(product[0])
-            
-               
+
+
             }
         }
     }
-   
+
     onQuantityChange = (event) => {
         this.setState({
             quantity: event.target.value
@@ -80,16 +80,15 @@ class ProductOverview extends Component {
     }
 
     prepareImageList = () => {
-        if(this.props.product.selectedItem.hasOwnProperty("overViewImages") &&  this.props.product.selectedItem.overViewImages.length > 0)
-        {
-         var imageList =  this.props.product.selectedItem.overViewImages.map((item) => {
-             console.log(item)
-                return <ProductSegmentedList imageUrl={item}/>
+        if (this.props.product.selectedItem.hasOwnProperty("overViewImages") && this.props.product.selectedItem.overViewImages.length > 0) {
+            var imageList = this.props.product.selectedItem.overViewImages.map((item) => {
+                console.log(item)
+                return <ProductSegmentedList imageUrl={item} />
             });
-            return imageList;  
+            return imageList;
         }
-        else{
-            return <ProductSegmentedList imageUrl={this.state.product.imageLogo}/>
+        else {
+            return <ProductSegmentedList imageUrl={this.state.product.imageLogo} />
         }
     }
 
@@ -105,19 +104,18 @@ class ProductOverview extends Component {
                     </Nav>
                 </Row>
                 <Row className="rowFlex align-items-center">
-                    <Col style={{display:'flex', flexDirection:'row'}}>
-                    <Col style={{flex:2, float:'left'}}>
-                        <ul class="productOverImages">
-                        {
-                            this.prepareImageList()
-                        }
-                        </ul>
-                    </Col>
-                    <Col style={{flex:10, float:'left'}}>
-                        <div style={{ height: "400px", backgroundSize: 'contain', backgroundPosition: "left", backgroundRepeat: "no-repeat", marginBottom: '10px', borderWidth: '2px', borderColor: "blue", backgroundImage: `url(${this.props.product.currImage})` }}>
-                        </div>
+                    <Col className='productImagesColl'>
+                        <Col lg={2} className='productIconColl'>
+                            <ul class="productOverImages">
+                                {
+                                    this.prepareImageList()
+                                }
+                            </ul>
                         </Col>
-                       
+                        <Col lg={8} className='productImageWrapper'>
+                            <img className='productImage' src={this.props.product.currImage} alt='productImage'></img>
+                        </Col>
+
                     </Col>
                     <Col>
                         <div style={{ borderColor: "red", borderWidth: "2px" }}>
@@ -172,4 +170,4 @@ const mapStateToProps = (state) => ({
     product: state.currentProduct
 })
 
-export default connect(mapStateToProps, {selectProductItem})(ProductOverview);
+export default connect(mapStateToProps, { selectProductItem })(ProductOverview);
