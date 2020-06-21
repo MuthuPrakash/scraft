@@ -23,6 +23,13 @@
   float: left;
 }
 
+.productImageIcon{
+  height: 80px;
+  width: 60px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
 .productImageWrapper{
   flex: 10;
   float: left;
@@ -32,6 +39,15 @@
   /* style={{ height: "400px", backgroundSize: 'contain', backgroundPosition: "left", backgroundRepeat: "no-repeat", marginBottom: '10px', borderWidth: '2px', borderColor: "blue", backgroundImage: `url(${this.props.product.currImage})` }} */
   height: 400px;
   
+}
+
+.productItemPrice, .productItemSize, .productItemQuantity, .productItemSubmit{
+  display: none;
+}
+
+.productItemOrderOptions{
+  padding-top: 30px;
+  font-weight: bolder;
 }
 
 /* ----------- Desktop ----------- */

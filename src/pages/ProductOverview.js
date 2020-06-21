@@ -5,6 +5,9 @@ import '../assets/stylesheets/productOverview.css'
 import ProductSegmentedList from '../components/ProductSegmentedList';
 import { connect } from 'react-redux';
 import { selectProductItem } from '../redux/actions/productOverViewActions';
+import email_subscribe_icon_footer from '../assets/banner/email_subscribe_icon_footer.png';
+import phone_icon_footer from '../assets/banner/phone_icon_footer.png';
+import whatsapp_icon_footer from '../assets/banner/whatsapp_icon_footer.png';
 
 class ProductOverview extends Component {
     constructor(props) {
@@ -118,10 +121,19 @@ class ProductOverview extends Component {
 
                     </Col>
                     <Col>
-                        <div style={{ borderColor: "red", borderWidth: "2px" }}>
-                            <div><h1>{this.props.product.selectedItem.displayName}</h1></div>
-                            <div><span>{this.props.product.selectedItem.cost.price}</span></div>
-                            <div>
+                        <div className='productItemInfo' style={{ borderColor: "red", borderWidth: "2px" }}>
+                            <div className='productItemTitle'><h1>{this.props.product.selectedItem.displayName}</h1></div>
+                            <div className='productItemDesc'><span>{this.props.product.selectedItem.description}</span></div>
+                            <div className='productItemOrderOptions'>
+                                <h3>For Orders: </h3>
+                            <Nav>
+                                    <Nav.Link href="tel:+919036013450">+91 9036013450 <img src={phone_icon_footer} alt='' /></Nav.Link>
+                                    <Nav.Link href="mailto:info@scraft.com">INFO@SCRAFT.COM <img src={email_subscribe_icon_footer} alt='' /></Nav.Link>
+                                    <Nav.Link href="https://wa.me/919036013450">+91 9036013450 <img src={whatsapp_icon_footer} alt='' /></Nav.Link>
+                                </Nav>
+                            </div>
+                            <div className='productItemPrice'><span>{this.props.product.selectedItem.cost.price}</span></div>
+                            <div className='productItemSize'>
                                 <Form.Group>
                                     <Form.Label>Size</Form.Label>
                                     <Form.Control as="select" onChange={this.onSizeChange} value={this.state.size}>
@@ -133,7 +145,7 @@ class ProductOverview extends Component {
                                     </Form.Control>
                                 </Form.Group>
                             </div>
-                            <div>
+                            <div className='productItemQuantity'>
                                 <Form.Group>
                                     <Form.Label>Quantity</Form.Label>
                                     <Form.Control as="select" onChange={this.onQuantityChange} value={this.state.quantity}>
@@ -145,7 +157,7 @@ class ProductOverview extends Component {
                                     </Form.Control>
                                 </Form.Group>
                             </div>
-                            <div>
+                            <div className='productItemSubmit'>
                                 <Form.Group as={Row}>
                                     <Col sm={{ span: 10, offset: 2 }}>
                                         <Button type="submit" onClick={this.addToCart}>Add To Cart</Button>

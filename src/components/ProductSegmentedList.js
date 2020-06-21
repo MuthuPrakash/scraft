@@ -1,30 +1,31 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {switchProductListSelection} from '../redux/actions/productOverViewActions';
+import { switchProductListSelection } from '../redux/actions/productOverViewActions';
 
 class ProductSegmentList extends Component {
-    constructor(props)
-    {
+    constructor(props) {
         super(props);
         console.log(this.props.product.currImage)
-       this.imageItem =  require("../content/images/ProductLogo/" + this.props.imageUrl);// require('../content/images/ProductLogo/' + this.props.imageUrl);
-        this.state={
+        this.imageItem = require("../content/images/ProductLogo/" + this.props.imageUrl);// require('../content/images/ProductLogo/' + this.props.imageUrl);
+        this.state = {
             isHighlighted: this.props.product.imageURL === this.props.imageUrl
         }
     }
 
-    onclick = ()=> {
-        
-        this.setState((state)=> ({
+    onclick = () => {
+
+        this.setState((state) => ({
             isHighlighted: !state.isHighlighted
         }));
 
         this.props.switchProductListSelection(this.props.imageUrl);
     }
-    render(){
-        return(
+    render() {
+        return (
             <li onClick={this.onclick} class={this.state.isHighlighted ? "selected" : ""}>
-                <div  style={{ height:'60px', width:'80px', marginBottom: '10px',backgroundSize: 'contain', backgroundRepeat: "no-repeat",backgroundImage: `url(${this.imageItem})`}}></div>
+                <div className='productImageIconWrapper'>
+                    <img className='productImageIcon' src={this.imageItem} alt='productImageIcon'></img>
+                </div>
             </li>
         )
     }
@@ -36,4 +37,4 @@ const mapStateToProps = (state) => ({
     product: state.currentProduct
 })
 
-export default connect(mapStateToProps,{switchProductListSelection})(ProductSegmentList);
+export default connect(mapStateToProps, { switchProductListSelection })(ProductSegmentList);

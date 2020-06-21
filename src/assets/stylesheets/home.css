@@ -132,7 +132,7 @@ div.bannerHoverSubtitle {
 }
 
 .bannerHoverButton {
-    height: 50px;
+    height: 50px !important;
     font-size: 20px;
 }
 
@@ -173,7 +173,7 @@ div.bannerHoverSubtitle {
 
 .weddingInvCollButton {
     width: 150px;
-    height: 50px;
+    height: 50px !important;
     font-size: 20px;
 }
 
@@ -214,7 +214,7 @@ div.bannerHoverSubtitle {
 
 .giftPaintingsCollButton {
     width: 150px;
-    height: 50px;
+    height: 50px !important;
     font-size: 20px;
 }
 
