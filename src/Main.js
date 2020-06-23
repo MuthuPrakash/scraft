@@ -111,11 +111,11 @@ export default class Main extends Component {
                                     <span>Contact</span>
                                 </div>
                                 <Nav>
-                                    <Nav.Link href="tel:1234567890">1234567890 <img src={phone_icon_footer} alt='' /></Nav.Link>
+                                    <Nav.Link href="tel:+919036013450">+91 9036013450 <img src={phone_icon_footer} alt='' /></Nav.Link>
                                     <Nav.Link href="mailto:info@scraft.com">INFO@SCRAFT.COM <img src={email_subscribe_icon_footer} alt='' /></Nav.Link>
                                     <Nav.Link href="https://instagram.com/scraft">Instagram <img src={instagram_icon_footer} alt='' /></Nav.Link>
                                     <Nav.Link href="https://facebook.com/scraft">Facebook <img src={facebook_icon_footer} alt='' /></Nav.Link>
-                                    <Nav.Link href="tel:1234567890">Whatsapp <img src={whatsapp_icon_footer} alt='' /></Nav.Link>
+                                    <Nav.Link href="https://wa.me/919036013450">Whatsapp <img src={whatsapp_icon_footer} alt='' /></Nav.Link>
                                 </Nav>
                             </Col>
                             <Col lg={4} className='newsletterInfo'>

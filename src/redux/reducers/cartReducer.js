@@ -11,7 +11,7 @@ export default function(state= initialState, action)
         case ADD_TO_CART:{
             return{
                 ...state, 
-                cart: [action.payload, ...state.cart],
+                productCart: [action.payload, ...state.cart],
                 total: state.total + action.payload.cost
             }
         }
