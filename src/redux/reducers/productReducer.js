@@ -20,7 +20,7 @@ export default function(state= initialState, action)
             return {
                 ...state, 
                 currentFilterText: curentFilter,
-                activeFilterProducts: state.productList.filter((item, index)=> {
+                activeFilterProducts: curentFilter === "*" ? state.productList : state.productList.filter((item, index)=> {
                     return item.categoryCode.toString().toLowerCase() === curentFilter
                 })
             }
