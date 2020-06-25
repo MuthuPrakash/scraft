@@ -22,7 +22,7 @@ export default class Home extends Component {
                         <div className='bannerHover'>
                             <div className='bannerHoverTitle'><span>JUST LIKE NATURE INTENDED</span></div>
                             <div className='bannerHoverSubtitle'><span>Paper Redefined</span></div>
-                            <div className='bannerHoverButtonDiv'><Button href='/products' className='bannerHoverButton' variant="dark">Shop All</Button>{' '}</div>
+                            <div className='bannerHoverButtonDiv'><Button href='/products?cat=*' className='bannerHoverButton' variant="dark">Shop All</Button>{' '}</div>
                         </div>
                     </Col>
                 </Row>
@@ -51,7 +51,7 @@ export default class Home extends Component {
                         <Col lg={6} >
                             <div className='weddingInvCollBanner'><img className='weddingInvCollBannerImage' src={ourFavorites_banner} alt='Wedding Invitation collection'></img></div>
                         </Col>
-                    </Row>
+                    </Row>         
 
 {/* Collection 2 Information */}
                     <Row className='giftPaintingsRow'>

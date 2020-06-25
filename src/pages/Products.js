@@ -22,7 +22,7 @@ class Products extends Component {
                         ? 'Backdrops'
                         : 'Scraft Products'
             : 'Scraft Products'
-        let categoryCodeValue = parsedQueryString.cat !== undefined ? parsedQueryString.cat.toString().trim().toLowerCase() : 'all';
+        let categoryCodeValue = parsedQueryString.cat !== undefined ? parsedQueryString.cat.toString().trim().toLowerCase() : '*';
 
         this.state = {
             // productList: require('../data/productsList.json'),
@@ -53,18 +53,10 @@ class Products extends Component {
         //     return <ProductList product={item} key={index} onOverView={this.productOverView} />
         // });
         var productList;
-
-        if(categoryCode == 'all') {
-            productList = this.props.myproducts.activeFilterProducts.map((item, index) => {
-                return <ProductList product={item} key={index} onOverView={this.productOverView} />
-            });
-        } else {
-            productList = this.props.myproducts.activeFilterProducts.map((item, index) => {
-                return <ProductList product={item} key={index} onOverView={this.productOverView} />
-            });
-        }
-
         
+        productList = this.props.myproducts.activeFilterProducts.map((item, index) => {
+            return <ProductList product={item} key={index} onOverView={this.productOverView} />
+        });       
 
         return productList;
     }
