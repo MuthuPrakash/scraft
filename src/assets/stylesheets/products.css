@@ -80,10 +80,7 @@
     flex-direction: column;
     flex: 1;
     flex-basis: calc(33% - 40px);
-    flex-grow: 0;
-    ;
     border-width: 5px;
-    
     border-color: orange;
     cursor: pointer;
 }
