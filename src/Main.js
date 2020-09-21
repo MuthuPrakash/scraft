@@ -18,6 +18,10 @@ import phone_icon_footer from './assets/banner/phone_icon_footer.png';
 import whatsapp_icon_footer from './assets/banner/whatsapp_icon_footer.png';
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import axios from 'axios'
+const MailerLite = require('mailerlite-api-v2-node').default
+
+const mailerLite = MailerLite('35e897a983132db6a2f84a416ed2ee6e')
 
 export function ScrollToTop() {
     const { pathname } = useLocation();
@@ -29,11 +33,36 @@ export function ScrollToTop() {
     return null;
 }
 
-export default class Main extends Component {
-    // constructor(props) {
-    //     super(props);
-    // }
+async function getAccountEmail() {
+    const { response } = await mailerLite.getAccount()
+    console.log('response: ', response);
+}
 
+export default class Main extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+    
+
+    emailSubscribe() {
+
+        console.log('button click - subscribe: ', document.getElementById('subscriberEmail').value)
+
+        // with async await
+        getAccountEmail();
+
+        // let config = {
+        //     headers: {
+        //         'X-MailerLite-ApiKey': '35e897a983132db6a2f84a416ed2ee6e',
+        //         'Content-Type': 'application/json'
+        //     },
+        //     crossdomain: true
+        // }
+
+        // axios.get('https://api.mailerlite.com/api/v2/subscribers', config)
+        //     .then(response => console.log(response))
+    }
 
     render() {
         return (
@@ -129,10 +158,10 @@ export default class Main extends Component {
                                     </span>
                                     </div>
                                     <div>
-                                        <FormControl aria-describedby="basic-addon1" placeholder="Email Address" />
+                                        <FormControl aria-describedby="basic-addon1" placeholder="Email Address" id='subscriberEmail' />
                                     </div>
                                     <div className='newsLetterButtonDiv'>
-                                        <Button className='newsLetterButton' variant="dark">SUBSCRIBE</Button>{' '}
+                                        <Button onClick={this.emailSubscribe} className='newsLetterButton' variant="dark">SUBSCRIBE</Button>{' '}
                                     </div>
                                 </div>
                             </Col>
