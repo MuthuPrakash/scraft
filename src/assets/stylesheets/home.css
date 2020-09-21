@@ -103,7 +103,6 @@
     .bannerHoverButton {
         width: 150px;
         height: 50px;
-        font-size: 20px;
     }
     .ourFavoritesHeader {
         font-size: 48px;
@@ -132,8 +131,7 @@ div.bannerHoverSubtitle {
 }
 
 .bannerHoverButton {
-    height: 50px;
-    font-size: 20px;
+    height: 50px !important;
 }
 
 .ourFavoritesHeader {
@@ -173,8 +171,8 @@ div.bannerHoverSubtitle {
 
 .weddingInvCollButton {
     width: 150px;
-    height: 50px;
-    font-size: 20px;
+    height: 50px !important;
+    font-size: 16px !important;
 }
 
 .weddingInvCollBannerImage {
@@ -214,8 +212,8 @@ div.bannerHoverSubtitle {
 
 .giftPaintingsCollButton {
     width: 150px;
-    height: 50px;
-    font-size: 20px;
+    height: 50px !important;
+    font-size: 16px !important;
 }
 
 .giftPaintingsCollBanner {

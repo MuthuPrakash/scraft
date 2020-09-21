@@ -22,7 +22,7 @@ export default class Home extends Component {
                         <div className='bannerHover'>
                             <div className='bannerHoverTitle'><span>JUST LIKE NATURE INTENDED</span></div>
                             <div className='bannerHoverSubtitle'><span>Paper Redefined</span></div>
-                            <div className='bannerHoverButtonDiv'><Button className='bannerHoverButton' variant="dark">Shop All</Button>{' '}</div>
+                            <div className='bannerHoverButtonDiv'><Button href='/products?cat=*' className='bannerHoverButton' variant="dark">Shop All</Button>{' '}</div>
                         </div>
                     </Col>
                 </Row>
@@ -45,13 +45,13 @@ export default class Home extends Component {
                                 <span>shop various collection of wedding invitations here</span>
                             </div>
                             <div>
-                                <div className='weddingInvCollButtonDiv'><Button className='weddingInvCollButton' variant="dark">Shop Invitatios</Button>{' '}</div>
+                                <div className='weddingInvCollButtonDiv'><Button href='/products?cat=wi' className='weddingInvCollButton' variant="dark">Shop Invitations</Button>{' '}</div>
                             </div>
                         </Col>
                         <Col lg={6} >
                             <div className='weddingInvCollBanner'><img className='weddingInvCollBannerImage' src={ourFavorites_banner} alt='Wedding Invitation collection'></img></div>
                         </Col>
-                    </Row>
+                    </Row>         
 
 {/* Collection 2 Information */}
                     <Row className='giftPaintingsRow'>
@@ -67,7 +67,7 @@ export default class Home extends Component {
                                 <span>shop various collection of Gift Paintings here</span>
                             </div>
                             <div>
-                                <div className='giftPaintingsCollButtonDiv'><Button className='giftPaintingsCollButton' variant="dark">Shop Gifts</Button>{' '}</div>
+                                <div className='giftPaintingsCollButtonDiv'><Button href="/products?cat=gifts" className='giftPaintingsCollButton' variant="dark">Shop Gifts</Button>{' '}</div>
                             </div>
                         </Col>
                     </Row>
@@ -82,7 +82,7 @@ export default class Home extends Component {
                                 <span>shop various collection of backdrops and props here</span>
                             </div>
                             <div>
-                                <div className='weddingInvCollButtonDiv'><Button className='weddingInvCollButton' variant="dark">Shop Backdrops</Button>{' '}</div>
+                                <div className='weddingInvCollButtonDiv'><Button href="/products?cat=backdrops" className='weddingInvCollButton' variant="dark">Shop Backdrops</Button>{' '}</div>
                             </div>
                         </Col>
                         <Col lg={6}>

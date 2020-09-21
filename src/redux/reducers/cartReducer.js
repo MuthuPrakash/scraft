@@ -11,7 +11,7 @@ export default function(state= initialState, action)
         case ADD_TO_CART:{
             return{
                 ...state, 
-                cart: [action.payload, ...state.cart],
+                productCart: [action.payload, ...state.cart],
                 total: state.total + action.payload.cost
             }
         }
@@ -19,7 +19,7 @@ export default function(state= initialState, action)
             return {
                 ...state,
                 productCart: state.productCart.filter((item, index)=> {
-                    return item.productCode != action.payload.productCode
+                    return item.productCode !== action.payload.productCode
                 }), 
                 total: state.total - action.payload.item.cost
             }

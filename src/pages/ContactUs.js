@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, Button } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import '../assets/stylesheets/contact.css'
 
 export default class ContactUs extends Component {
@@ -38,7 +38,10 @@ export default class ContactUs extends Component {
                         </div>
                     </Col>
                     <Col lg={7}>
-                        <div className='contactFeedbackSection'>
+                        <div className='mapsEmbed'>
+                            <iframe title='gmap' className='mapsEmbedIframe' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.2530497657267!2d-77.27997238500464!3d38.89532825467186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b64bdcf9ea63f5%3A0xd69e61116a09585b!2s2550%20Chain%20Bridge%20Loop%2C%20Vienna%2C%20VA%2022181!5e0!3m2!1sen!2sus!4v1591056721036!5m2!1sen!2sus" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+                        {/* <div className='contactFeedbackSection'>
                             <Form>
                                 <Form.Group controlId="formGroupFullName">
                                     <Form.Label>Enter Your Name*</Form.Label>
@@ -63,7 +66,7 @@ export default class ContactUs extends Component {
                                 </div>
 
                             </Form>
-                        </div>
+                        </div> */}
 
                     </Col>
                 </Row>
