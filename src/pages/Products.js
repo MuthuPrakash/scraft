@@ -9,7 +9,7 @@ const queryString = require('query-string');
 class Products extends Component {
     constructor(props) {
         super(props);
-        console.log('test')
+
         console.log(this.props.products)
         let parsedQueryString = queryString.parse(this.props.location.search);
         console.log('category : ', parsedQueryString.cat);
